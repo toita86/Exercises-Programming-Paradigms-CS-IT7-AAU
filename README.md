@@ -56,3 +56,18 @@ This course emphasizes:
 * [Haskell Wiki](https://wiki.haskell.org/Haskell)
 * [Hoogle](https://hoogle.haskell.org/) — search engine for Haskell functions
 
+## How to use
+The environment for the exercises is generated with [Forgeon](https://github.com/toita86/Forgeon.git) and its configured to work with the same nvim configuration as in the host machine.
+
+To start the container use:
+```bash
+docker compose up -d
+```
+and to access the shell inside the container use:
+```bash
+docker exec -it <name_of_the_container> bash --login
+```
+to turn everything off use:
+```bash
+docker compose down
+```
