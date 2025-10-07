@@ -1,0 +1,37 @@
+_min_copier_version: "9.0.0"
+_templates_suffix: .jinja
+
+languages:
+  type: yaml
+  help: "Comma-separated list of languages (e.g. [python, go, rust])"
+  default: ["python"]
+
+nvim_config_type:
+  type: str
+  help: "Choose Neovim config"
+  choices:
+    - NvChad
+    - LazyVim
+    - AstroNvim
+    - kickstart.nvim
+    - Custom GitHub Repo
+    - Custom Local Path
+    - I will use VS code
+  default: NvChad
+
+_exclude:
+  - .git
+  - "{% if nvim_config_type != 'I will use VS code' %}.devcontainer{% endif %}"
+
+custom_nvim_repo:
+  type: str
+  help: "If using 'Custom GitHub Repo', enter the repo URL"
+  default: ""
+  when: "{{ nvim_config_type == 'Custom GitHub Repo' }}"
+
+custom_nvim_path:
+  type: str
+  help: "If using 'Custom Local Path', enter the path (will be mounted on the container)"
+  default: "~/.config/nvim"
+  when: "{{ nvim_config_type == 'Custom Local Path' }}"
+

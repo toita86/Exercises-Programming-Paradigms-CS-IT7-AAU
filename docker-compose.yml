@@ -1,0 +1,21 @@
+services:
+  dev:
+    build:
+      context: .
+      args:
+        USERNAME: ${UNAME}
+        USER_UID: ${UID}
+        USER_GID: ${GID}
+    volumes:
+      - .:/workspace
+      - ~/.config/nvim:/home/${UNAME}/.config/nvim
+      - nvim_data:/home/${UNAME}/.local/share/nvim
+      - ghcup_data:/home/${UNAME}/.ghcup
+      - cabal_data:/home/${UNAME}/.cabal
+    tty: true
+    stdin_open: true
+
+volumes:
+  nvim_data:
+  ghcup_data:
+  cabal_data:
