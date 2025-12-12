@@ -1,4 +1,3 @@
-
 data W x = Bingo x deriving Show
 
 instance Functor W where

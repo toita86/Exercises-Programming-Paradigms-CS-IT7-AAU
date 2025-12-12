@@ -1,6 +1,9 @@
 # Programming Paradigms — Haskell Exercises
 
-This repository contains my exercises and assignments for the **Programming Paradigms** course at AAU for the Master CS-IT7, focusing on the **functional programming paradigm** using **Haskell**.
+This repository contains my exercises for the **Programming Paradigms** course at AAU for the Master CS-IT7, focusing on the **functional programming paradigm** using **Haskell**. 
+
+> [!IMPORTANT]
+> All the exercises and are created by the professor [Hans Hüttel](https://vbn.aau.dk/en/persons/hans/) except the ones that ones with the filename that follow this format `FP??_exs.hs`. This exercises are from the YouTube series made by [Graham Hutton](https://www.youtube.com/watch?v=qThX0aoW9YI&list=PLF1Z-APd9zK7usPMx3LGMZEHrECUGodd3).
 
 ## Overview
 
@@ -10,8 +13,8 @@ The goal of this repository is to document and organize my progress through the 
 - Recursion and higher-order functions  
 - Algebraic data types and pattern matching  
 - Type classes and polymorphism  
-- Lazy evaluation and infinite data structures  
 - Functional composition and monads 
+- Lazy evaluation and infinite data structures  
 
 ## Requirements
 
@@ -52,9 +55,9 @@ This course emphasizes:
 
 ## Resources
 
-* [Learn You a Haskell for Great Good!](http://learnyouahaskell.com/)
+* [Learn You a Haskell for Great Good!](https://learnyouahaskell.github.io)
 * [Haskell Wiki](https://wiki.haskell.org/Haskell)
-* [Hoogle](https://hoogle.haskell.org/) — search engine for Haskell functions
+* [Hoogle](https://hoogle.haskell.org/) search engine for Haskell functions
 
 ## How to use
 The environment for the exercises is generated with [Forgeon](https://github.com/toita86/Forgeon.git) and its configured to work with the same nvim configuration as in the host machine.
@@ -71,3 +74,7 @@ to turn everything off use:
 ```bash
 docker compose down
 ```
+
+## Use of AI
+
+AI(LLMs like ChatGPT and Gemini) was used for the formatting and improving the explanations for the variuos subject. The use was as a practical tool for streamlining the structure of the notes.
