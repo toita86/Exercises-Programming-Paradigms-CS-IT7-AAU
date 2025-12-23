@@ -15,6 +15,5 @@ should return False.
 
 odd' x = ( x `mod` 2 ) == 1
 
--- amy :: (a -> Bool) -> b -> Bool
-amy f [x] = f x 
-amy f (x:xs) = (f x) && amy f xs
+amy f [] = True
+amy f (x:xs) = f x && amy f xs
