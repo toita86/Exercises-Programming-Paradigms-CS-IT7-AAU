@@ -27,12 +27,12 @@ notOrd = Node l1 l2
 
 minmax (Leaf l) = Just (l,l)
 minmax (Node l r) = do 
-                     (minL, maxL) <- minmax l
-                     (minR, maxR) <- minmax r
-                     if maxL <= minR 
-                       then Just (min minL minR, max maxL maxR) 
-                       else Nothing 
-                       
+  (minL, maxL) <- minmax l
+  (minR, maxR) <- minmax r
+  if maxL <= minR 
+    then Just (min minL minR, max maxL maxR) 
+    else Nothing 
+
 minorder t = do 
   (min, _) <- minmax t 
   return min
